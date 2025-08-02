@@ -13,7 +13,6 @@ export const authOptions = {
   ],
   callbacks: {
     async session({ session, user }) {
-      // Add the user's MongoDB ObjectId to the session object
       session.user.id = user.id;
       return session;
     }
